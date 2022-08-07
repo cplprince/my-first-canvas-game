@@ -4,7 +4,7 @@ export default class PowerUp {
 		this.velocity = velocity;
 
 		this.image = new Image();
-		this.image.src = "./../img/lightningBolt.png";
+		this.image.src = "./img/lightningBolt.png";
 
 		this.alpha = 1;
 		gsap.to(this, {
