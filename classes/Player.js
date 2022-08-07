@@ -35,14 +35,14 @@ export default class Player {
 		if (this.keyState.ArrowDown) this.velocity.y = 1;
 
 		if (
-			this.x + this.radius + this.velocity.x >= canvasWidth ||
-			this.x - this.radius + this.velocity.x <= 0
+			this.x + this.radius + this.velocity.x * this.speed >= canvasWidth ||
+			this.x - this.radius + this.velocity.x * this.speed <= 0
 		) {
 			this.velocity.x = 0;
 		}
 		if (
-			this.y + this.radius + this.velocity.y >= canvasHeight ||
-			this.y - this.radius + this.velocity.y <= 0
+			this.y + this.radius + this.velocity.y * this.speed >= canvasHeight ||
+			this.y - this.radius + this.velocity.y * this.speed <= 0
 		) {
 			this.velocity.y = 0;
 		}
